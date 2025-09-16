@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>From 24 Hours to 2 Minutes: How a Scrappy Team of 6 Built Healthcare's AI Future | Roan Crabb</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Discover how I worked with AWS & Anthropic to help architect and steer an entire organization's AI trajectory, transforming healthcare support and unlocking millions in funding.">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Healthcare's AI Transformation: How 6 People Changed an Enterprise | Roan Crabb">
+    <meta property="og:description" content="See how a scrappy team built healthcare's first AI support system, triggering a company-wide pivot to AI-first development and securing AWS as a strategic partner.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Additional Meta Tags -->
+    <meta name="keywords" content="healthcare AI, AWS Bedrock, Anthropic Claude, prompt engineering, EHR optimization, healthcare software, retrieval-augmented generation, enterprise transformation, AI strategy, healthcare IT">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CaseStudy",
+        "name": "From 24 Hours to 2 Minutes: How a Scrappy Team of 6 Built Healthcare's AI Future",
+        "description": "How I worked with AWS & Anthropic to help architect and steer an entire organization's AI trajectory, transforming healthcare support and unlocking millions in funding.",
+        "industry": "Healthcare Software",
+        "primaryTopic": "AI-Powered Enterprise Transformation",
+        "author": {
+            "@type": "Person",
+            "name": "Roan Crabb"
+        },
+        "result": {
+            "@type": "ResultsData",
+            "metrics": [
+                "Response time reduced from 24 hours to 2 minutes",
+                "Triggered company-wide pivot to AI-first development",
+                "Unlocked millions in PE funding",
+                "Secured AWS as strategic partner"
+            ]
+        }
+    }
+    </script>
+
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/splitting.css">
+        
+    </head>
+        <body class="appear-animate case-study">
+        
+        <!-- Page Loader -->        
+        <div class="page-loader dark">
+            <div class="loader">Loading...</div>
+        </div>
+        <!-- End Page Loader -->
+
+        <!-- Skip to Content -->
+        <a href="#main" class="btn skip-to-content">Skip to Content</a>
+        <!-- End Skip to Content -->
+        
+        <!-- Page Wrap -->
+        <div class="page bg-dark light-content" id="top">
+            
+            <!-- Navigation panel -->
+            <nav class="main-nav dark transparent stick-fixed wow-menubar">
+                <div class="full-wrapper relative clearfix">
+                    
+                    <!-- Logo ( * your text or image into link tag *) -->
+                    <div class="nav-logo-wrap local-scroll">
+                        <a href="index.html" class="logo morphing-text">
+                            <img src="images/logo-white.png" alt="Roan Crabb" width="188" height="37" />
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile Menu Button -->
+                    <div class="mobile-nav" role="button" tabindex="0">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Menu</span>
+                    </div>
+                    
+                    <!-- Main Menu -->
+                    <div class="inner-nav desktop-nav">
+                        <ul class="clearlist scroll-nav local-scroll">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="index.html#services">Our Services</a></li>
+                            <li><a href="index.html#work">Our Work</a></li>
+                            <li><a href="index.html#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Main Menu -->                    
+                </div>
+            </nav>
+            <!-- End Navigation panel -->
+            
+            <main id="main">    
+                <!-- Home Section -->
+                                <section class="page-section bg-dark-alfa-70 pt-sm-100" data-background="images/portfolio/ai-bot-header.jpg">
+                                    <div class="container relative">
+                                    
+                                        <div class="row">
+                                            
+                                            <div class="col-md-8">
+                                                <div class="wow fadeInUpShort" data-wow-delay=".1s">
+                                                    <h1 class="hs-line-7 mb-20 mb-xs-10">From 24 Hours to 2 Minutes: How a Scrappy Team of 6 Built Healthcare's AI Future</h1>
+                                                </div>
+                                                <div class="wow fadeInUpShort" data-wow-delay=".2s">
+                                                    <p class="hs-line-6 opacity-075 mb-20 mb-xs-0">
+                                                        How I worked with AWS & Anthropic to help architect and steer an entire organization's AI trajectory
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-4 mt-30 wow fadeInUpShort" data-wow-delay=".1s">
+                                                <div class="mod-breadcrumbs text-end">
+                                                    <a href="index.html#work"><- Back to Home</a>&nbsp;
+                                                </div>                                
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                    </div>
+                                </section>
+                                <!-- End Home Section -->
+                                <!-- Divider -->
+                                <hr class="mt-0 mb-0 white morphing-bg" />
+                                <!-- End Divider -->
+                                
+                <!-- The Challenge / Intro Section -->
+                                <section class="page-section bg-dark-lighter light-content pt-100 pt-sm-50 pb-sm-10">
+                                    <div class="container relative">
+                                        
+                                        <div class="row">
+                                            <h2 class="section-title mb-50 mb-sm-20">The Challenge: Support Drowning in Its Own Success</h2>
+                                            <p>Healthcare providers trying to document patient visits were hitting EHR errors and waiting 24 hours for support responses. Meanwhile, patient backlogs grew and documentation compliance deadlines ticked away.</p>
+                                            <div class="col-lg-7 d-flex align-items-center wow fadeInUpShort" data-wow-delay=".2s" data-wow-duration="1.2s">
+                                                <div>
+                                                    
+                                                    <p>This was the reality for thousands of providers using our enterprise EHR platforms. Our Level 1 support team was drowning in complexity - medical jargon met software intricacies, creating a perfect storm of frustration. Support tickets piled up, and our Salesforce metrics painted an ugly picture.
+                                                    </p>
+                
+                                                    <p>But we had 15,000+ support documents spanning over a decade, covering everything from legacy EHR systems to modern patient portals. The knowledge existed - it just wasn't accessible.
+                                                    </p>
+
+                                                    <p>This wasn't just about fixing support though. This was Greenway's first-ever AI initiative - a proof of concept that would fundamentally reshape our entire product roadmap. The stakes were massive: get this right, and we'd unlock millions in PE funding while transforming into an AI-first healthcare company. Get it wrong, and we'd remain stuck in the past while competitors raced ahead.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        
+                                            
+                                            <div class="col-lg-4 offset-lg-1  d-flex align-items-center wow fadeInUpShort" data-wow-delay=".5s" data-wow-duration="2.1s">
+                                                <div>                                    
+                                                    <!-- Project snapshot Grid -->
+                                                    <div class="row alt-features-grid">
+                                                        
+                                                        <!-- Features Item -->
+                                                        <div class="col-lg-6 col-sm-6">
+                                                            <div class="alt-features-item ">
+                                                                <div class="alt-features-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Medical-App-Smartphone--Streamline-Streamline-3.0"><desc>Medical App Smartphone Streamline Icon: https://streamlinehq.com</desc><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M18.5 19.5h-13" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M16.5 0.5h-9a2 2 0 0 0 -2 2v19a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-19a2 2 0 0 0 -2 -2Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M16.5 9a0.5 0.5 0 0 0 -0.5 -0.5h-2.5V6a0.5 0.5 0 0 0 -0.5 -0.5h-2a0.5 0.5 0 0 0 -0.5 0.5v2.5H8a0.5 0.5 0 0 0 -0.5 0.5v2a0.5 0.5 0 0 0 0.5 0.5h2.5V14a0.5 0.5 0 0 0 0.5 0.5h2a0.5 0.5 0 0 0 0.5 -0.5v-2.5H16a0.5 0.5 0 0 0 0.5 -0.5V9Z" stroke-width="1"></path><path stroke="currentColor" d="M12 21.75a0.25 0.25 0 1 1 0 -0.5" stroke-width="1"></path><path stroke="currentColor" d="M12 21.75a0.25 0.25 0 1 0 0 -0.5" stroke-width="1"></path></svg>
+                                                                </div>
+                                                                <h3 class="alt-features-title">Industry</h3>
+                                                                <div class="alt-features-descr">
+                                                                     Healthcare Software (10+ Enterprise Platforms)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Features Item -->
+                                                        
+                                                        <!-- Features Item -->
+                                                        <div class="col-lg-6 col-sm-6 ">
+                                                            <div class="alt-features-item">
+                                                                <div class="alt-features-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Target-Center-1--Streamline-Streamline-3.0" height="24" width="24"><desc>Target Center 1 Streamline Icon: https://streamlinehq.com</desc><g><path d="M11.5 15a2.49 2.49 0 1 1 -0.73 -1.77" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M14.12 13a5.4 5.4 0 0 1 0.38 2 5.5 5.5 0 1 1 -1.61 -3.89" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M16.37 10.76A8.52 8.52 0 1 1 15 9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M9 15 20.5 3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M20.5 3.5h3S21 11 17 7 20.5 0.5 20.5 0.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m18.5 5.5 0 -4.09" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m0.5 23.5 2.49 -2.49" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m15.01 21.01 2.49 2.49" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M9 14.75a0.25 0.25 0 1 1 -0.25 0.25 0.25 0.25 0 0 1 0.25 -0.25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></g></svg>
+                                                                </div>
+                                                                <h3 class="alt-features-title">The Stakes</h3>
+                                                                <div class="alt-features-descr">
+                                                                     Company's first AI product that would pivot our entire organizational strategy
+                 
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Features Item -->
+                                                        
+                                                        <!-- Features Item -->
+                                                        <div class="col-lg-6 col-sm-6">
+                                                            <div class="alt-features-item">
+                                                                <div class="alt-features-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Professions-Woman-Doctor-2--Streamline-Streamline-3.0"><desc>Professions Woman Doctor 2 Streamline Icon: https://streamlinehq.com</desc><defs></defs><title>professions-woman-doctor-2</title><path d="M5 22.001a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m6.5 20.501 0 -3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m17.5 20.501 0 -3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m15 23.5 0.772 -2.317a1 1 0 0 1 0.949 -0.683h1.558a1 1 0 0 1 0.949 0.683L20 23.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M23.5 23.5v-1a4 4 0 0 0 -2.6 -3.746L16 17.109" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m8 17.109 -4.9 1.646A4 4 0 0 0 0.5 22.5v1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m12 23.501 0 -5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M10.5 13a1.971 1.971 0 0 0 1.358 0.5h0.284A1.969 1.969 0 0 0 13.5 13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M11 9a1.087 1.087 0 0 0 -1 -0.5A1.087 1.087 0 0 0 9 9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M15 9a1.087 1.087 0 0 0 -1 -0.5 1.087 1.087 0 0 0 -1 0.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M12.02 16.5c1.387 0 4.49 -1.721 4.932 -4.365a1 1 0 0 1 0.572 -0.747C18.6 10.9 18.872 8.937 18 8.5c0.5 -2.986 0.5 -8 -5.982 -8s-6.477 5.014 -5.981 8c-0.871 0.436 -0.6 2.4 0.478 2.888a1 1 0 0 1 0.572 0.747C7.53 14.78 10.633 16.5 12.02 16.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M5.848 6.485c1.338 -0.031 4.034 0.378 6.152 -2.17 2.128 2.56 4.871 2.145 6.193 2.179" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M5.732 10.546a5.167 5.167 0 0 1 -1.961 3.172 0.5 0.5 0 0 0 -0.041 0.831 4.428 4.428 0 0 0 2.915 0.933" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M18.309 10.546a5.159 5.159 0 0 0 1.961 3.172 0.5 0.5 0 0 1 0.04 0.831 4.426 4.426 0 0 1 -2.915 0.933" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg>
+                                                                </div>
+                                                                <h3 class="alt-features-title">My Role</h3>
+                                                                <div class="alt-features-descr">
+                                                                    End-to-end design, prompt engineering, CSS coding, AWS collaboration
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Features Item -->
+                                                        
+                                                        <!-- Features Item -->
+                                                        <div class="col-lg-6 col-sm-6">
+                                                            <div class="alt-features-item">
+                                                                <div class="alt-features-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Mood-Happy-Smartphone--Streamline-Streamline-3.0" height="24" width="24"><desc>Mood Happy Smartphone Streamline Icon: https://streamlinehq.com</desc><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.5 8a2 2 0 1 1 -4 0h4Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17.433 0.5A5.954 5.954 0 0 0 11.5 6.567a5.94 5.94 0 0 0 0.781 3.192L10.5 13.5l3.741 -1.782A6.064 6.064 0 1 0 17.433 0.5v0Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M16.5 14.5v9" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M0.5 23.5v-18a2 2 0 0 1 2 -2H10" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M9.5 7.5h-9" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8 19a2.25 2.25 0 1 0 0 -4.5A2.25 2.25 0 0 0 8 19Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.5 23.5a4.644 4.644 0 0 0 -9 0" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7 5.5h2.5" stroke-width="1"></path><path stroke="currentColor" d="M15.25 5a0.25 0.25 0 1 1 0 -0.5" stroke-width="1"></path><path stroke="currentColor" d="M15.25 5a0.25 0.25 0 1 0 0 -0.5" stroke-width="1"></path><g><path stroke="currentColor" d="M19.75 5a0.25 0.25 0 1 1 0 -0.5" stroke-width="1"></path><path stroke="currentColor" d="M19.75 5a0.25 0.25 0 1 0 0 -0.5" stroke-width="1"></path></g></svg>
+                                                                </div>
+                                                                <h3 class="alt-features-title">Core Challenge</h3>
+                                                                <div class="alt-features-descr">
+                                                                     Transform 15,000 documents into an intelligent AI that actually understands healthcare
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Features Item -->
+                                                        
+                                                    </div>
+                                                    <!-- End Project snapshot Grid -->
+                                                    
+                                                </div>
+                                            </div>
+                                            
+                                        </div><!-- end row-->
+                                    </div>
+                                </section>
+                                <!-- End Section -->
+                
+                <!--Our Approach Section-->
+                                <section class="page-section bg-dark light-content pt-100 pt-sm-50 pb-sm-50">
+                                    <div class="container relative">
+                                        <div class="row">
+                                            <h2>Our Approach: Move Fast, Break Things, Build the Future</h2>
+                
+                                            <p>We assembled a scrappy team of six - cherry-picked from UX, engineering, data, and platform teams. This wasn't your typical corporate project with endless meetings and approval chains. Our Chief Product & Technology Officer became our biggest champion (after some initial skepticism), bulldozing roadblocks so we could move at startup speed inside an enterprise org.</p> 
+                                        </div>
+                                        
+                                        <div class="row">
+                                                <div class="col-lg-3">
+                                                      
+                                                    
+                                                    <p><strong>The mission was threefold:</strong></p>
+                                                    
+                                                    <ol>
+                                                        <li><strong>Prove AI could transform our business</strong> - Success here would unlock millions in PE funding and pivot our entire product roadmap to AI-first development</li>
+                                                        <li><strong>Build something that understood healthcare context</strong> - A system that could parse the complex relationships between clinical workflows, billing processes, and technical documentation</li>
+                                                        <li><strong>Ship it for our major conference</strong> - We were scheduled to demo this live at our annual customer event. Nothing like a public deadline to focus the mind</li>
+                                                    </ol>
+                                                </div>
+                
+                                                <div class="col-lg-9 wow fadeScaleIn" data-wow-duration="1.5s">
+                                                    <img src="images/portfolio/ai-bot_desktop.png" alt="" />
+                                                    <div class="text-center col-11 offset-lg-1">
+                                                        <small>The Technical Foundation: Built on AWS Bedrock with Claude Haiku at its core</small>
+                                                    </div>  
+                                                </div>
+                
+                                        </div><!-- end row-->
+
+                                        <div class="row mt-60">
+                                            <div class="col-lg-12">
+                                                <h3>The Technical Foundation</h3>
+                                                <p>We started with GPT-3.5 for proof of concept, then pivoted to Claude Instant, and finally landed on Claude Haiku. The combination of speed, accuracy, and direct access to Anthropic's research team through AWS made the decision clear. This wasn't just tool selection - we were essentially auditioning partners for what would become a multi-million dollar AI transformation. AWS won, and they're now investing their own resources into our success.</p>
+                                                
+                                                <p><strong>Our retrieval-augmented generation pipeline was designed on AWS Bedrock and supporting AWS services:</strong></p>
+                                                <ul>
+                                                    <li><strong>Amazon OpenSearch Service</strong> → Vector similarity search to retrieve relevant answers despite the quirks of healthcare-specific language</li>
+                                                    <li><strong>Titan Embeddings (via Bedrock)</strong> → Encoded our mix of medical and technical terminology into dense vector space for accurate retrieval</li>
+                                                    <li><strong>Amazon Kendra</strong> → Added natural-language search over unstructured documentation, improving recall for FAQ-style and loosely structured content</li>
+                                                    <li><strong>Amazon S3</strong> → Storage for 15+ years of processed support documentation</li>
+                                                    <li><strong>Amazon DynamoDB</strong> → Maintained conversation and session state across multi-turn interactions (we migrated here from RDS for scale and performance)</li>
+                                                </ul>
+
+                                                <p>The secret sauce was structuring the system prompt to be modular and expandable. One prompt architecture that could adapt across multiple platforms - from EHRs to billing systems to regulatory reporting tools. Think of it as a Swiss Army knife for healthcare support.</p>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </section>
+                                <!-- Our Approach  Section -->
+                                
+                                <!-- Divider -->
+                                <hr class="mt-0 mb-0 white morphing-bg" />
+                                <!-- End Divider -->
+                
+                <!-- Plot Twist Section -->
+                                <section class="page-section bg-dark-lighter light-content pt-100 pt-sm-50 pb-sm-60">
+                                    <div class="container relative">
+                                        
+                                        <div class="row">
+                                            <h2 class="section-title mb-50 mb-sm-20">The Plot Twist: When Documentation Moves Faster Than Documentation</h2>
+                                            <p>Being Greenway's first AI project meant we were literally building the plane while flying it. AWS's documentation still referenced their old SageMaker platform while we were pioneering on Bedrock. Some days it felt like assembling IKEA furniture with stereo instructions.</p>
+                                            
+                                            <p><strong>The confidence problem:</strong> When the AI was wrong, it was <em>confidently</em> wrong. Evaluating response accuracy became our biggest challenge. Healthcare + AI = zero margin for error when patient care is involved.</p>
+
+                                            <p><strong>The CSS adventure:</strong> With our conference deadline looming and the dev team slammed, I dusted off my decade-old front-end skills. No access to the TypeScript files meant MacGyvering a fully responsive, WCAG-compliant interface using pseudo-elements for sticky footers and slide-out panels. All pure CSS. Sometimes the best solution is the one that ships.</p>
+
+                                            <h3 class="mt-60 mb-30">Prompt Engineering: Teaching AI to Speak Healthcare</h3>
+
+                                            <p>Working directly with Anthropic's research team (thanks to our AWS partnership), I crafted prompts that could navigate healthcare's linguistic minefield. We're talking about a domain where "discharge" has multiple meanings, where SOAP notes aren't about hygiene, and where terminology precision matters.</p>
+
+
+                                            <!-- Process Section -->
+                                            <section class="journey bg-dark light-content pt-20 pb-40 mt-20 mb-60 col-lg-10 offset-lg-1">
+                                                <div class="container relative">
+                                                    <h4 class="mb-40">Key prompt engineering strategies I implemented:</h4>
+                                                    <!-- Grid -->
+                                                    <div class="row">
+                                                    
+                                                        <!-- Item -->
+                                                        <div class="col-md-4 col-lg-4 mb-30">
+                                                            <div class="work-process-item text-center pt-20">
+                                                                <div class="work-process-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="App-Window-Search-Text--Streamline-Streamline-3.0" height="48" width="48"><desc>App Window Search Text Streamline Icon: https://streamlinehq.com</desc><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M0.5 5.504h23" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10.5 20.5h-8a2 2 0 0 1 -2 -2v-16a2 2 0 0 1 2 -2h19a2 2 0 0 1 2 2V18" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17.5 21.5a4 4 0 1 0 0 -8 4 4 0 0 0 0 8Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M20.328 20.328 23.5 23.5" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3.5 8.504H7" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8 12.504h3.5" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10 8.504h6" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3.5 16.504h6" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M18.5 8.504h2" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3.5 12.504h2" stroke-width="1"></path><path stroke="currentColor" d="M4 3.25a0.25 0.25 0 0 1 0 -0.5" stroke-width="1"></path><path stroke="currentColor" d="M4 3.25a0.25 0.25 0 0 0 0 -0.5" stroke-width="1"></path><g><path stroke="currentColor" d="M7 3.25a0.25 0.25 0 0 1 0 -0.5" stroke-width="1"></path><path stroke="currentColor" d="M7 3.25a0.25 0.25 0 0 0 0 -0.5" stroke-width="1"></path></g><g><path stroke="currentColor" d="M10 3.25a0.25 0.25 0 0 1 0 -0.5" stroke-width="1"></path><path stroke="currentColor" d="M10 3.25a0.25 0.25 0 1 0 0 -0.5" stroke-width="1"></path></g></svg>
+                                                                </div>
+                                                                <h3 class="work-process-title">XML Tagging</h3>
+                                                                <small>For structured responses that maintain consistency across different query types</small>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Item -->
+                                                        
+                                                        <!-- Item -->
+                                                        <div class="col-md-4 col-lg-4 mb-30">
+                                                            <div class="work-process-item text-center pt-20">
+                                                                <div class="work-process-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Legal-Scale-Unequal--Streamline-Streamline-3.0" height="48" width="48"><desc>Legal Scale Unequal Streamline Icon: https://streamlinehq.com</desc><defs></defs><title>legal-scale-unequal</title><path d="m12 6.682 0 15.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m9.5 22.182 5 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m1 16.182 3.5 -7.464L8 16.182" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M10.5 5.182a1.5 1.5 0 1 0 3 0 1.5 1.5 0 1 0 -3 0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M4.5 19.682a3.416 3.416 0 0 0 3.5 -3.5H1a3.416 3.416 0 0 0 3.5 3.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m23 10.182 -3.5 -7.533 -3.5 7.533" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="M19.5 13.682a3.416 3.416 0 0 1 -3.5 -3.5h7a3.416 3.416 0 0 1 -3.5 3.5Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m13.494 5.078 8.061 -3.26" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path><path d="m2.446 9.547 8.419 -3.406" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"></path></svg>
+                                                                </div><h3 class="work-process-title">Chain-of-Thought Reasoning</h3>
+                                                                <small>For complex troubleshooting that requires step-by-step problem solving</small>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Item -->
+                                                        
+                                                        <!-- Item -->
+                                                        <div class="col-md-4 col-lg-4 mb-30">
+                                                            <div class="work-process-item text-center pt-20">
+                                                                <div class="work-process-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-0.5 -0.5 24 24" id="Help-Question-Network--Streamline-Streamline-3.0" height="48" width="48"><desc>Help Question Network Streamline Icon: https://streamlinehq.com</desc><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m15.650119999999998 6.459283199999999 2.85844 -2.84004" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.790119999999998 4.1409016c1.016232 0 1.8399999999999999 -0.8237955999999999 1.8399999999999999 -1.8399999999999999s-0.823768 -1.8400027599999997 -1.8399999999999999 -1.8400027599999997 -1.8399999999999999 0.82379836 -1.8399999999999999 1.8400027599999997c0 1.0162044 0.823768 1.8399999999999999 1.8399999999999999 1.8399999999999999Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m16.535159999999998 16.5416 1.9448799999999997 1.95776" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.798399999999997 21.620919999999998c1.016232 0 1.8399999999999999 -0.8238599999999999 1.8399999999999999 -1.8399999999999999 0 -1.016232 -0.823768 -1.8399999999999999 -1.8399999999999999 -1.8399999999999999s-1.8399999999999999 0.823768 -1.8399999999999999 1.8399999999999999c0 1.01614 0.823768 1.8399999999999999 1.8399999999999999 1.8399999999999999Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m6.4501384 6.459283199999999 -2.8593599999999997 -2.84004" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2.3101108 4.1409016c1.0162044 0 1.8399999999999999 -0.8237955999999999 1.8399999999999999 -1.8399999999999999s-0.8237955999999999 -1.8400027599999997 -1.8399999999999999 -1.8400027599999997S0.47010712 1.2846971999999999 0.47010712 2.3009016c0 1.0162044 0.8237992799999999 1.8399999999999999 1.84000368 1.8399999999999999Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m5.565070799999999 16.5416 -1.9458 1.95776" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2.3 21.620919999999998c1.0162044 0 1.8399999999999999 -0.8238599999999999 1.8399999999999999 -1.8399999999999999 0 -1.016232 -0.8237955999999999 -1.8399999999999999 -1.8399999999999999 -1.8399999999999999s-1.8399999999999999 0.823768 -1.8399999999999999 1.8399999999999999c0 1.01614 0.8237955999999999 1.8399999999999999 1.8399999999999999 1.8399999999999999Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M15.190119999999999 10.580919999999999h2.76" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.790119999999998 12.420919999999999c1.016232 0 1.8399999999999999 -0.8238599999999999 1.8399999999999999 -1.8399999999999999 0 -1.016232 -0.823768 -1.8400184 -1.8399999999999999 -1.8400184s-1.8399999999999999 0.8237863999999999 -1.8399999999999999 1.8400184c0 1.01614 0.823768 1.8399999999999999 1.8399999999999999 1.8399999999999999Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M6.910110799999999 10.580919999999999h-2.76" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M2.3101108 12.420919999999999c1.0162044 0 1.8399999999999999 -0.8238599999999999 1.8399999999999999 -1.8399999999999999 0 -1.016232 -0.8237955999999999 -1.8400184 -1.8399999999999999 -1.8400184S0.47010712 9.564687999999999 0.47010712 10.580919999999999c0 1.01614 0.8237992799999999 1.8399999999999999 1.84000368 1.8399999999999999Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M8.2983908 9.2c0.0000736 -0.49755439999999995 0.13466039999999999 -0.9858627999999999 0.389528 -1.413212 0.2548584 -0.42735839999999997 0.6205492 -0.7778691999999999 1.0582851999999998 -1.0144472 0.43773599999999996 -0.23656879999999997 0.9313159999999999 -0.35040039999999995 1.4283919999999999 -0.3294428 0.49716799999999994 0.0209576 0.979432 0.1759132 1.3956399999999998 0.4484816 0.4163 0.27256839999999993 0.75118 0.6526112 0.96922 1.0998968 0.21794799999999998 0.44728559999999995 0.31096 0.9451895999999999 0.269192 1.4410235999999998 -0.041768 0.495788 -0.21684399999999998 0.971152 -0.506644 1.375584 -0.2898 0.40452399999999994 -0.68356 0.72312 -1.1396039999999998 0.9221159999999999 -0.328256 0.143336 -0.6075679999999999 0.379224 -0.803712 0.6789599999999999 -0.19614399999999999 0.29973599999999995 -0.30047199999999996 0.650164 -0.300288 1.00832V13.799999999999999" stroke-width="1"></path><path stroke="currentColor" d="M11.04 16.099999999999998c-0.127052 0 -0.22999999999999998 -0.102948 -0.22999999999999998 -0.22999999999999998s0.102948 -0.22999999999999998 0.22999999999999998 -0.22999999999999998" stroke-width="1"></path><path stroke="currentColor" d="M11.04 16.099999999999998c0.127052 0 0.22999999999999998 -0.102948 0.22999999999999998 -0.22999999999999998S11.167051999999998 15.639999999999999 11.04 15.639999999999999" stroke-width="1"></path></svg>
+                                                                </div><h3 class="work-process-title">Explicit Guardrails</h3>
+                                                                <small>For sensitive healthcare topics that require careful handling</small>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Item -->
+                                                        
+                                                   </div>
+                                                   <div class="row">
+                                                        <!-- Item -->
+                                                        <div class="col-md-6 col-lg-6 mb-30">
+                                                            <div class="work-process-item text-center pt-20">
+                                                                <div class="work-process-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Monetization-User-Laptop--Streamline-Streamline-3.0" height="48" width="48"><desc>Monetization User Laptop Streamline Icon: https://streamlinehq.com</desc><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M0.5 23a7 7 0 0 1 7 -7 6.217 6.217 0 0 1 2.5 0.5" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M9.504 23H3.503" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.504 18v2" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.504 14.5a4 4 0 1 0 0 -8 4 4 0 0 0 0 8Z" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.465 9.943a4.8 4.8 0 0 1 -2.294 0.557 5 5 0 0 1 -4.5 -2.819" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M11.504 1v2" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.504 2h-2" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M22.254 10v2" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M23.254 11h-2" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.5 3h-2.8c-0.659 0 -1.193 0.193 -1.193 1 0 1.307 4 2.693 4 4 0 0.693 -0.534 1 -1.193 1H15.5" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17.504 3V1.5" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17.504 10.5V9" stroke-width="1"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M12.276 14.684a1 1 0 0 1 0.949 -0.684h8.891a1.001 1.001 0 0 1 0.949 1.316L20.5 23h-11l2.776 -8.316Z" stroke-width="1"></path><path stroke="currentColor" d="M16.629 19.5a1 1 0 0 1 0 -2" stroke-width="1"></path><path stroke="currentColor" d="M16.629 19.5a1 1 0 1 0 0 -2" stroke-width="1"></path></svg>
+                                                                </div><h3 class="work-process-title">Context Preservation</h3>
+                                                                <small>Across multi-turn conversations to maintain continuity in complex support scenarios</small>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Item -->
+                                                        <!-- Item -->
+                                                        <div class="col-md-6 col-lg-6 mb-30">
+                                                            <div class="work-process-item text-center pt-20">
+                                                                <div class="work-process-icon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Travel-Map-Finger--Streamline-Streamline-3.0" height="48" width="48"><desc>Travel Map Finger Streamline Icon: https://streamlinehq.com</desc><g><path d="M19.21 17.37h-2a0.5 0.5 0 0 1 -0.5 -0.5v-5.5a2 2 0 1 0 -4 0v7.06a0.51 0.51 0 0 1 -0.33 0.48 0.5 0.5 0 0 1 -0.56 -0.16l-0.57 -0.69a2 2 0 0 0 -2.82 -0.26 2 2 0 0 0 -0.25 2.82l2.65 3.08a0.49 0.49 0 0 0 0.38 0.18h12a0.51 0.51 0 0 0 0.5 -0.5v-1.51a4.51 4.51 0 0 0 -4.5 -4.5Z" fill="currentColor" stroke-width="1"></path><path d="M1.19 17a1 1 0 0 0 1.1 -0.89 14.13 14.13 0 0 1 0.31 -1.81 1 1 0 0 0 -0.73 -1.21 1 1 0 0 0 -1.21 0.74 15.11 15.11 0 0 0 -0.36 2.1A1 1 0 0 0 1.19 17Z" fill="currentColor" stroke-width="1"></path><path d="M2.39 19.86a1 1 0 1 0 -2 0.32 14.92 14.92 0 0 0 0.51 2.08 1 1 0 0 0 1.25 0.66 1 1 0 0 0 0.66 -1.25 14 14 0 0 1 -0.42 -1.81Z" fill="currentColor" stroke-width="1"></path><path d="M3.37 8.08a16.1 16.1 0 0 0 -1.16 1.79 1 1 0 1 0 1.75 1A14.44 14.44 0 0 1 5 9.27a1 1 0 1 0 -1.6 -1.19Z" fill="currentColor" stroke-width="1"></path><path d="M9.47 4.19a1 1 0 0 0 -1.37 -0.36A15.16 15.16 0 0 0 6.34 5a1 1 0 0 0 1.23 1.61 14.52 14.52 0 0 1 1.54 -1.06 1 1 0 0 0 0.36 -1.36Z" fill="currentColor" stroke-width="1"></path><path d="M12.42 2.89a0.49 0.49 0 0 1 0.05 0.7l-0.76 0.88a1 1 0 1 0 1.5 1.31l0.79 -0.87a0.51 0.51 0 0 1 0.35 -0.17 0.52 0.52 0 0 1 0.36 0.12l0.87 0.77a1 1 0 0 0 1.32 -1.51l-0.9 -0.76a0.51 0.51 0 0 1 0 -0.71l0.76 -0.87A1 1 0 1 0 15.21 0.47l-0.77 0.87a0.49 0.49 0 0 1 -0.34 0.17 0.53 0.53 0 0 1 -0.36 -0.13l-0.87 -0.76a1 1 0 0 0 -1.32 1.51Z" fill="currentColor" stroke-width="1"></path></g></svg>
+                                                                </div><h3 class="work-process-title">Drift Prevention</h3>
+                                                                <small>Techniques to keep responses grounded in our documentation</small>
+                                                            </div>
+                                                        </div>
+                                                        <!-- End Item -->
+                                                   </div>
+                                                   <!-- End Grid -->
+                                                    
+                                                </div>
+                                            </section>
+                                            <!-- End Process Section -->
+                                        </div>
+                                        <div class="row">
+                                            
+                                        
+                                                
+                
+                                            <div class="col-lg-7  wow fadeScaleIn" data-wow-duration="1.5s">
+                                                <img src="images/portfolio/ai-bot_jargon.png" alt="Healthcare User Journey Mapping" />
+                                                <div class="text-center">
+                                                    <small>The result was an AI that could distinguish between "patient refused treatment" (clinical) and "payment refused" (billing) - context that typical chatbots completely miss.</small>
+                                                </div>
+                                            </div>
+                
+                                            <div class="col-lg-4 offset-lg-1 d-flex align-items-center wow fadeInUpShort">
+                                                <div>
+                                                    
+                                                    <p><em>[I can share sanitized prompt architecture examples - but not in public case studies for obvious reasons]</em></p>
+                                                    
+                                                    <blockquote>
+                                                        <p><em>"The AI support system completely transformed how our medical staff interacts with the EHR platform. What used to be a frustrating 24-hour wait is now resolved in minutes, allowing our practitioners to focus on patient care instead of software issues."</em></p>
+                                                        <footer>-- Sarah Johnson, Chief Medical Information Officer at Regional Health Network</footer>
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+
+                                        </div><!-- end row-->
+                                    </div>
+                                </section>
+                                <!-- End Plot Twist Section -->
+                
+                <!-- Results Section -->
+                                <section class="page-section pb-80 pt-100 bg-dark light-content pt-sm-50 pb-sm-40">
+                                    <div class="container relative">
+                                        <div class="mb-40 mb-sm-20">
+                                            <div class="row section-text">
+                                                <h2 class="section-title mb-50 mb-sm-20 wow linesAnimIn" data-wow-offset="0" data-splitting="lines">The Results: Support Metrics That Made Salesforce Dashboards Smile</h2>
+                                                <p>While I can't share specific numbers (healthcare + privacy = complicated), our Salesforce metrics showed substantial improvements across every key support KPI. Support tickets dropped significantly. First-contact resolution skyrocketed. Response times went from "maybe tomorrow" to "right now."</p>
+
+                                                <strong>But the real wins went beyond metrics:</strong><br /><br />
+                                                
+                                                <h3>Strategic Victory: Entire Company Pivots to AI-First</h3>
+                                                <p>This POC didn't just solve support - it triggered a complete organizational transformation. Greenway has since pivoted its entire product roadmap to be AI and automation-driven, securing millions in funding from our PE parent company. AWS is now investing their own resources into our initiatives, seeing potential for billions in revenue from healthcare AI transformation.</p>
+                                                
+                                                <h3>Internal Adoption: From Skeptics to Believers</h3>
+                                                <p>Our initially skeptical CPTO became our biggest advocate. The support team that feared AI would replace them now uses it as their co-pilot, handling complex issues while the AI tackles the routine stuff.</p>
+
+                                                <h3>Conference Demo: Living Dangerously</h3>
+                                                <p>At reENGAGE Healthcare Conference 2024, I presented our solution live with the AWS team. We didn't just show the product - we taught prompt engineering to healthcare professionals stuck in "Google keyword mode." Context is king in AI, and those three-word Google searches are killing AI results. We showed them frameworks for better prompting: assign Role, explain Goal, give Context, define Output.</p>
+
+                                            </div>
+                                        </div>
+                
+                
+                                        <!-- Results Numbers Counters -->
+                                        <div class="count-wrapper mt-80 mt-sm-30 mb-sm-0 mb-60">
+                                            <div class="row">
+                                                
+                                                <!-- Counter Item -->
+                                                <div class="col-md-6 col-lg-3 mb-md-30">
+                                                    <div class="count-item">
+                                                        <div class="count-bg wow scalexIn"></div>
+                                                        <div class="relative wow fadeIn" data-wow-delay="1s">
+                                                            <div class="count-descr">
+                                                                <span class="count-title"><strong>Response Time Improved</strong></span>
+                                                            </div>
+                                                            <div class="count-number">
+                                                                <span>⬆</span>720x
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Counter Item -->
+                                                
+                                                <!-- Counter Item -->
+                                                <div class="col-md-6 col-lg-3 mb-md-30">
+                                                    <div class="count-item count-item-2">
+                                                        <div class="count-bg wow scalexIn"></div>
+                                                        <div class="relative wow fadeIn" data-wow-delay="1.1s">
+                                                            <div class="count-descr">
+                                                                <span class="count-title"><strong>Company Pivot</strong></span>
+                                                            </div>
+                                                            <div class="count-number">
+                                                                AI-First
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Counter Item -->
+                                                
+                                                <!-- Counter Item -->
+                                                <div class="col-md-6 col-lg-3 mb-md-30">
+                                                    <div class="count-item count-item-3">
+                                                        <div class="count-bg wow scalexIn"></div>
+                                                        <div class="relative wow fadeIn" data-wow-delay="1.2s">
+                                                            <div class="count-descr">
+                                                                <span class="count-title"><strong>PE Funding Unlocked</strong></span>
+                                                            </div>
+                                                            <div class="count-number">
+                                                                Millions
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Counter Item -->
+                                                
+                                                <!-- Counter Item -->
+                                                <div class="col-md-6 col-lg-3 mb-md-30">
+                                                    <div class="count-item count-item-4">
+                                                        <div class="count-bg wow scalexIn"></div>
+                                                        <div class="relative wow fadeIn" data-wow-delay="1.3s">
+                                                            
+                                                            <div class="count-descr">
+                                                                <span class="count-title"><strong>Strategic Partner</strong></span>
+                                                            </div>
+                                                            <div class="count-number">
+                                                                AWS
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Counter Item -->
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- End Results Numbers Counters -->
+                
+                                        
+                                    </div>
+                                </section>
+                                <!-- End Results Section -->   
+                
+                
+                                <!-- Divider -->
+                                <hr class="mt-0 mb-0 white morphing-bg" />
+                                <!-- End Divider -->
+                
+                
+                
+                <!-- Why It Worked Section-->
+                                <section class="page-section bg-dark-alfa-70" data-background="images/full-width-images/bg_waves6.jpeg">
+                                    <div class="container relative">
+                                        
+                                        <!-- Grid -->
+                                        <div class="alt-service-grid">
+                                            <div class="row">
+                                                <h2 class="section-title">Why It Actually Worked</h2>                            
+                                            </div>
+                                            
+                                            <div class="row wow fadeInUpShort" data-wow-delay=".3s">
+                                                
+                                                <!-- Item -->
+                                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                                    <div class="alt-service-item">
+                                                        <div class="alt-service-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="User-Question--Streamline-Streamline-3.0"><desc>User Question Streamline Icon: https://streamlinehq.com</desc><path d="M21.43 9.86a7.46 7.46 0 0 1 -0.72 -1.45c0 -5.27 -4.87 -8.41 -9.57 -8.41a9.93 9.93 0 0 0 -10 10.06c0 3.6 1.35 6.28 4 8v5.44a0.5 0.5 0 0 0 0.5 0.5h10a0.5 0.5 0 0 0 0.5 -0.5v-3c1.74 0 2.8 -0.21 3.58 -1s1 -3.34 1 -4.53h1a1.3 1.3 0 0 0 1 -0.52 1.27 1.27 0 0 0 0.19 -0.75 7.64 7.64 0 0 0 -1.48 -3.84ZM11.5 17.5A1.5 1.5 0 1 1 13 16a1.5 1.5 0 0 1 -1.5 1.5Zm1.6 -6.08a1 1 0 0 0 -0.6 0.92 1 1 0 0 1 -2 0 3 3 0 0 1 1.8 -2.75 2 2 0 1 0 -2.8 -1.84 1 1 0 0 1 -2 0 4 4 0 1 1 5.6 3.67Z" fill="currentColor" stroke-width="1"></path></svg>
+                                                        </div>
+                                                        <h3 class="alt-services-title">Small Team, Big Impact</h3>
+                                                        <div class="alt-services-descr">Six people moving at startup speed inside a healthcare enterprise. No tickets. No approval chains. Just rapid iteration with executive air cover. This scrappy approach became the model for how Greenway now approaches all AI initiatives.</div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item -->
+                                                
+                                                <!-- Item -->
+                                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                                    <div class="alt-service-item">
+                                                        <div class="alt-service-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Check-Badge--Streamline-Streamline-3.0"><desc>Check Badge Streamline Icon: https://streamlinehq.com</desc><path d="m22.72 10.35 -1.84 -1.48a1.09 1.09 0 0 1 -0.4 -1l0.25 -2.34a2.09 2.09 0 0 0 -2.3 -2.31l-2.35 0.25a1.09 1.09 0 0 1 -1 -0.4l-1.45 -1.81a2.16 2.16 0 0 0 -3.26 0L8.89 3.1a1.09 1.09 0 0 1 -1 0.4l-2.32 -0.25a2.09 2.09 0 0 0 -2.3 2.31l0.25 2.34a1.09 1.09 0 0 1 -0.4 1l-1.84 1.45a2.09 2.09 0 0 0 0 3.26l1.84 1.48a1.1 1.1 0 0 1 0.4 1l-0.25 2.35a2.07 2.07 0 0 0 0.6 1.7 2 2 0 0 0 1.7 0.6l2.35 -0.25a1.09 1.09 0 0 1 1 0.4l1.48 1.84a2.09 2.09 0 0 0 3.26 0l1.48 -1.84a1.09 1.09 0 0 1 1 -0.4l2.35 0.25a2 2 0 0 0 1.7 -0.6 2.07 2.07 0 0 0 0.6 -1.7l-0.25 -2.35a1.1 1.1 0 0 1 0.4 -1l1.84 -1.48a2.09 2.09 0 0 0 0 -3.26Zm-10.32 4.7a1.79 1.79 0 0 1 -2.67 0.19L7.29 12.8a1 1 0 1 1 1.42 -1.42L11 13.63l3.91 -5.21a1 1 0 0 1 1.6 1.2Z" fill="currentColor" stroke-width="1"></path></svg>
+                                                        </div>
+                                                        <h3 class="alt-services-title">Design-to-Deploy Ownership</h3>
+                                                        <div class="alt-services-descr">I touched every layer - from Figma mockups to prompt engineering to emergency CSS coding. When you own the full stack, you can move fast without breaking things (except maybe some CSS conventions).</div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item -->
+                                                
+                                                <!-- Item -->
+                                                <div class="col-sm-12 col-md-4 col-lg-4">
+                                                    <div class="alt-service-item">
+                                                        <div class="alt-service-icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="Travel-Map-Finger--Streamline-Streamline-3.0"><desc>Travel Map Finger Streamline Icon: https://streamlinehq.com</desc><g><path d="M19.21 17.37h-2a0.5 0.5 0 0 1 -0.5 -0.5v-5.5a2 2 0 1 0 -4 0v7.06a0.51 0.51 0 0 1 -0.33 0.48 0.5 0.5 0 0 1 -0.56 -0.16l-0.57 -0.69a2 2 0 0 0 -2.82 -0.26 2 2 0 0 0 -0.25 2.82l2.65 3.08a0.49 0.49 0 0 0 0.38 0.18h12a0.51 0.51 0 0 0 0.5 -0.5v-1.51a4.51 4.51 0 0 0 -4.5 -4.5Z" fill="currentColor" stroke-width="1"></path><path d="M1.19 17a1 1 0 0 0 1.1 -0.89 14.13 14.13 0 0 1 0.31 -1.81 1 1 0 0 0 -0.73 -1.21 1 1 0 0 0 -1.21 0.74 15.11 15.11 0 0 0 -0.36 2.1A1 1 0 0 0 1.19 17Z" fill="currentColor" stroke-width="1"></path><path d="M2.39 19.86a1 1 0 1 0 -2 0.32 14.92 14.92 0 0 0 0.51 2.08 1 1 0 0 0 1.25 0.66 1 1 0 0 0 0.66 -1.25 14 14 0 0 1 -0.42 -1.81Z" fill="currentColor" stroke-width="1"></path><path d="M3.37 8.08a16.1 16.1 0 0 0 -1.16 1.79 1 1 0 1 0 1.75 1A14.44 14.44 0 0 1 5 9.27a1 1 0 1 0 -1.6 -1.19Z" fill="currentColor" stroke-width="1"></path><path d="M9.47 4.19a1 1 0 0 0 -1.37 -0.36A15.16 15.16 0 0 0 6.34 5a1 1 0 0 0 1.23 1.61 14.52 14.52 0 0 1 1.54 -1.06 1 1 0 0 0 0.36 -1.36Z" fill="currentColor" stroke-width="1"></path><path d="M12.42 2.89a0.49 0.49 0 0 1 0.05 0.7l-0.76 0.88a1 1 0 1 0 1.5 1.31l0.79 -0.87a0.51 0.51 0 0 1 0.35 -0.17 0.52 0.52 0 0 1 0.36 0.12l0.87 0.77a1 1 0 0 0 1.32 -1.51l-0.9 -0.76a0.51 0.51 0 0 1 0 -0.71l0.76 -0.87A1 1 0 1 0 15.21 0.47l-0.77 0.87a0.49 0.49 0 0 1 -0.34 0.17 0.53 0.53 0 0 1 -0.36 -0.13l-0.87 -0.76a1 1 0 0 0 -1.32 1.51Z" fill="currentColor" stroke-width="1"></path></g></svg>
+                                                        </div>
+                                                        <h3 class="alt-services-title">Architecture That Scales</h3>
+                                                        <div class="alt-services-descr">The modular prompt structure I developed has been successfully adapted for additional support documentation across more product lines. While still evolving, it helped establish prompt engineering best practices that our teams now use as a reference point.</div> 
+                                                    </div>
+                                                </div>
+                                                <!-- End Item -->
+                                                
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                        <!-- End Grid -->
+                                        
+                                    </div>
+                                </section>
+                                <!-- End Why It Worked Section -->
+                
+                
+                <!-- Long Game Section-->
+                                <section class="page-section bg-dark light-content pt-100 pb-40 pt-sm-50 pb-sm-40" style="overflow:visible">
+                                    <div class="container relative">
+                                        <div class="row">
+                                                <div class="col-lg-4">
+                                                    
+                                                    <h2>The Long Game: What This Really Built</h2>
+                
+                                                    <p>This wasn't just about reducing support tickets. This project fundamentally changed Greenway's trajectory:
+                                                    </p>
+                                                    
+                                                    <ul>
+                                                        <li><strong>Triggered a company-wide pivot</strong> - From traditional healthcare software to AI-first product development</li>
+                                                        <li><strong>Unlocked millions in PE funding</strong> - Our parent company saw the potential and opened the checkbook</li>
+                                                        <li><strong>Secured AWS as a strategic partner</strong> - They're now investing resources into our success, seeing billions in potential healthcare AI revenue</li>
+                                                        <li><strong>Established our AI development methodology</strong> - The scrappy team model became a blueprint for approaching AI initiatives</li>
+                                                        <li><strong>Proved healthcare + AI is viable</strong> - With the right guardrails, context, and architecture</li>
+                                                    </ul>
+                
+                                                    <p>What started as external customer support pivoted to internal use first. We realized our own teams needed it more urgently, and it gave us a perfect testing ground before the full customer rollout. Now it's the backbone of our support ecosystem, with customer-facing versions in development. More importantly, it's the foundation stone of Greenway's AI transformation - the small project that changed everything.
+                                                    </p>
+                                                    
+                                                    <p><em>Note: Due to healthcare privacy and competitive considerations, actual product screenshots aren't shareable. But if you want to see my Figma skills or discuss the prompt architecture, I'm happy to walk through sanitized examples.</em></p>
+                
+                                                </div>
+                
+                                                <div class="col-lg-8  wow fadeInUpShort" data-wow-duration="1.8s">
+                                                    <img src="images/portfolio/ai-bot_mobile-support.png" alt="Mobile AI Support Experience" />
+                                                </div>
+                
+                                        </div><!-- end row-->
+                                        
+                                    </div>
+                                </section>
+                                <!-- End Long Game Section -->
+                
+                            <!-- Divider -->
+                            <hr class="mt-0 mb-0 white morphing-bg" />
+                            <!-- End Divider -->
+                           </main>
+            
+            <!-- Footer -->
+            <footer class="page-section bg-dark-lighter light-content footer pb-100 pb-sm-50">
+                <div class="container">
+
+
+                    <!-- Contact Form -->                            
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1 pb-sm-60">
+                            
+                            <form class="form contact-form wow fadeInUpShort" data-wow-delay=".5s" id="contact_form">
+                                <div class="row">
+                                    <h3 class="call-action-1-heading">Ready to start your project? We'd love to help.</h3>
+                                    <div class="call-action-1-decription mb-60 mb-sm-30">
+                                        Have a complex financial platform that needs simplifying? Or maybe just a sneaking suspicion that your user experience could work harder for your business? Let's talk about how we can help you achieve (or exceed) these kinds of results.
+                                    </div>
+                                </div>    
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <!-- Name -->
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name" class="input-lg round form-control" placeholder="Enter your name" pattern=".{3,100}" required aria-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- Email -->
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" class="input-lg round form-control" placeholder="Enter your email" pattern=".{5,100}" required aria-required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Message -->
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" class="input-lg round form-control" style="height: 130px;" placeholder="Enter your message"></textarea>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- Inform Tip -->
+                                        <div class="form-tip pt-20 pt-sm-0 mb-sm-20">
+                                            All fields are required
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- Send Button -->
+                                        <div class="text-end pt-10">
+                                            <button class="submit_btn btn btn-mod btn-w btn-large btn-round morphing-bg" id="submit_btn" aria-controls="result">
+                                                Send Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <div id="result" role="region" aria-live="polite" aria-atomic="true"></div>
+                            
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <!-- End Contact Form -->
+
+                    <!-- Footer Text -->
+                    <div class="footer-text">
+                        
+                        <!-- Copyright -->
+                        <div class="footer-copy">
+                            <a href="index.html">© Roan Crabb 2025</a>.
+                        </div>
+                        <!-- End Copyright -->
+                        
+                        <div class="footer-made">
+                            You have exceptional scrolling technique.
+                        </div>
+                        
+                    </div>
+                    <!-- End Footer Text -->                     
+                 </div>                 
+                 <!-- Top Link -->
+                 <div class="local-scroll">
+                     <a href="#top" class="link-to-top"><i class="link-to-top-icon"></i><span class="sr-only">Scroll to top</span></a>
+                 </div>
+                 <!-- End Top Link -->
+                 
+            </footer>
+            <!-- End Footer -->
+        
+        </div>
+        <!-- End Page Wrap -->
+        
+        
+        <!-- JS -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/SmoothScroll.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/jquery.localScroll.min.js"></script>
+        <script src="js/jquery.viewport.mini.js"></script>
+        <script src="js/jquery.parallax-1.1.3.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/masonry.pkgd.min.js"></script>
+        <script src="js/jquery.lazyload.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/morphext.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/all.js"></script>
+        <script src="js/contact-form.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/objectFitPolyfill.min.js"></script>
+        <script src="js/splitting.min.js"></script>
+        
+    </body>
+</html>
