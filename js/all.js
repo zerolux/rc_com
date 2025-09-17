@@ -6,11 +6,35 @@
      Scripts initialization
      --------------------------------------------- */
     
+    var isPageLoaderHidden = false;
+
+    function hidePageLoader(immediate){
+        if (isPageLoaderHidden) {
+            return;
+        }
+
+        var $pageLoader = $(".page-loader");
+        if (!$pageLoader.length) {
+            isPageLoaderHidden = true;
+            return;
+        }
+
+        isPageLoaderHidden = true;
+
+        $pageLoader.find("div").stop(true, true).fadeOut();
+
+        var $sequence = $pageLoader.stop(true, true);
+        if (immediate) {
+            $sequence.fadeOut("slow");
+        } else {
+            $sequence.delay(200).fadeOut("slow");
+        }
+    }
+
     $(window).on("load", function(){
-        
-        // Page loader        
-        $(".page-loader div").fadeOut();
-        $(".page-loader").delay(200).fadeOut("slow");
+
+        // Page loader
+        hidePageLoader();
         
         init_text_rotator();
         initWorkFilter();
@@ -33,7 +57,14 @@
     });    
     
     $(document).ready(function(){
-        $(window).trigger("resize");            
+        // Safety fallback in case the load event is delayed by slow assets
+        setTimeout(function(){
+            if ($(".page-loader").is(":visible")) {
+                hidePageLoader(true);
+            }
+        }, 1200);
+
+        $(window).trigger("resize");
         init_classic_menu();
         init_lightbox();        
         init_team();
