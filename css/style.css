@@ -459,12 +459,15 @@ blockquote{
     padding: 0;
     border: none;
     background: none;
-    font-style: normal;
+    font-style: italic;
     letter-spacing: -0.02em;
     line-height: 1.6;
     font-weight: 600;
-    padding-left: 5%;
-    border-left: 2px solid #dc3545;
+    padding-left: 20%;
+    border-left: 4px solid #F6B000;
+}
+blockquote.alt {
+    border-left: 0
 }
 blockquote p{
     position: relative;
@@ -475,8 +478,9 @@ blockquote p{
     line-height: 1.6;
 }
 blockquote footer{
-    margin-top: -10px;
-    font-size: 15px;
+    margin-top: 0px;
+    font-size: 25px;
+    text-align: right;
     font-weight: 400; /*500*/ 
 }
 dl dt{
@@ -1483,7 +1487,13 @@ a.bg-video-button-muted{
     font-weight: 400;
     line-height: 1.3;
 }
-
+.hs-line-16{
+    margin-top: 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: normal;
+    padding-left: 1.5em
+}
 
 /* ==============================
    Custom appear animation
@@ -3348,7 +3358,7 @@ a.logo:hover{
     color: #757575;
 }
 .light-content .alt-features-descr{
-    color: #bbb;
+    color: #d3d3d3;
 }
 
 
@@ -4184,10 +4194,10 @@ a.logo:hover{
 }
 .light-content .post-prev-info,
 .light-content .post-prev-info a{
-    color: #bbb;
+    color: #d3d3d3;
 }
 .light-content .post-prev-text{
-    color: #bbb;
+    color: #d3d3d3;
 }
 
 /* ==============================
