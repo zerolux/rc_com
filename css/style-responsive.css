@@ -177,6 +177,9 @@
     .fa-examples > li{
         width: 33.3%;
     }
+#home .hs-line-5 {
+        font-size: 70px;
+    }
 
 }
   
@@ -269,6 +272,20 @@
         bottom: 18px;
     }   
     
+.playground_img img {
+    transform:scale(1);
+    margin:0 auto 
+}
+.playground_img {
+    margin-bottom: -35%;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+}
+#home .hs-line-5 {
+        font-size: 53px;
+    }
+
 }
   
   
@@ -362,7 +379,9 @@
         top: 17px;
         right: 17px;
     }
-
+#home .hs-line-5 {
+        font-size: 53px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -529,6 +548,10 @@
         line-height: 1.2;
     }
     
+    #home .hs-line-5 {
+        font-size: 26px;
+    }
+
 }
 
 

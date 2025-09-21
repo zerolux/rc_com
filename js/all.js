@@ -169,12 +169,12 @@
         $(".mobile-on .desktop-nav > ul").css("max-height", $(window).height() - $(".main-nav").height() - 20 + "px");
         
         // Mobile menu style toggle
-        if ($(window).width() <= 1024) {
+        if ($(window).width() <= 575) {
             $(".main-nav").addClass("mobile-on");
             $(".mobile-cart").show();
         }
         else 
-            if ($(window).width() > 1024) {
+            if ($(window).width() > 575) {
                 $(".main-nav").removeClass("mobile-on");
                 desktop_nav.show();
                 $(".mobile-cart").hide();
