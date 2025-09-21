@@ -3901,11 +3901,18 @@ a.logo:hover{
     justify-content: center; /* Centers horizontally */
     align-items: center;
 }
-.playground_img {
+.art-vert-img {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    flex-direction: column;
+}
+.playground_img  {
     display: flex;
     justify-content: left; /* Centers horizontally */
     align-items: center;
 }   
+
 .playground_img img {
     transform:scale(1.7);
     margin-left: 40% 
