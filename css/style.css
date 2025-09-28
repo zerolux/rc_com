@@ -6537,6 +6537,11 @@ table.shopping-cart-table tr td{
 .case-study .clmobile {
     margin-top:-13%
 }
+
+.intro .container.relative h1, .intro .container.relative p {
+    text-shadow: 0px 0px 10px #00000078;
+}
+
 @media screen and (max-width: 991.98px) {
     .case-study .clmobile {
         margin-top:-5%
