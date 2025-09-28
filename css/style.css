@@ -6470,7 +6470,7 @@ table.shopping-cart-table tr td{
 }
 
 /* ==============================
-   ZN Over Rides
+   RC Over Rides
    ============================== */
 
 .owl-controls{
@@ -6503,7 +6503,7 @@ table.shopping-cart-table tr td{
 
 
 /* ==============================
-   CASE STUDY - ZN Over Rides
+   CASE STUDY -  Over Rides
    ============================== */
 
 .case-study ol, .case-study ul {
@@ -6514,8 +6514,8 @@ table.shopping-cart-table tr td{
 }
 
 .case-study .work-process-icon {
-    font-size: 100px;
-    margin-bottom: 20px;
+    font-size: 130px;
+    margin-bottom: 10px;
 }
 .case-study .work-process-item {
     margin-bottom:2em ;
@@ -6560,5 +6560,5 @@ table.shopping-cart-table tr td{
   }
 
   /* ==============================
-   END  – CASE STUDY - ZN Over Rides
+   END  – CASE STUDY -  Over Rides
    ============================== */
