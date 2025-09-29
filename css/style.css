@@ -6548,13 +6548,13 @@ table.shopping-cart-table tr td{
     }
 }
 @media screen and (max-width: 574.98px) {
-    /* Styles for mobile devices */
+    /* Styles for mobile devices 
     .case-study .alt-features-item  {
       text-align: center;
     }
     .case-study .alt-features-icon {
         justify-self: center;
-    }
+    }*/
     .case-study .journey, .case-study .count-wrapper {
     width: 80%;
     margin: 0 auto;
