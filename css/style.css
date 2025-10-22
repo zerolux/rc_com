@@ -1498,7 +1498,7 @@ a.bg-video-button-muted{
     font-size: 48px;
     font-weight: 600;
     line-height: normal;
-    padding-left: 1.5em
+    /*padding-left: 1.5em*/
 }
 
 /* ==============================
@@ -2405,6 +2405,7 @@ a.logo:hover{
 .main-nav.dark a.logo:hover{
     font-size: 30px;
     font-weight: 900;
+    letter-spacing: 25px;
    /* 
    Squash this later
     background: linear-gradient(
