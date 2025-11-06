@@ -238,8 +238,10 @@
                      
         });
         
-        $(document).on("click", function(event){            
-            if ($(window).width() <= 1024) {
+        $(document).on("click", function(event){
+            var isMobileNavActive = $(".main-nav").hasClass("mobile-on") || (mobile_nav.hasClass("active") && desktop_nav.hasClass("js-opened"));
+
+            if (isMobileNavActive) {
                 var $trigger = $(".main-nav");
                 if ($trigger !== event.target && !$trigger.has(event.target).length) {
                     desktop_nav.slideUp("slow", "easeOutExpo").removeClass("js-opened");
